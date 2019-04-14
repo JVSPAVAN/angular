@@ -1,0 +1,82 @@
+
+<!-- <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script> -->
+
+<body>
+
+ <div class = "main">
+    
+     <div class = "container">
+	     <div class="tabs">
+            <ul class ="tab-links">
+	          <li class="active"><a href="#tab1" >Customer </a></li>
+	          <li> <a href="#tab2" >Analytics</a></li>
+	        </ul>
+	
+	         <div class="tab-content">
+	         <div id="tab1" class="tab active">
+	              <div class ="customerData required-field">
+	  
+	            <label id="cusId">Customer ID</label> <input id="customerId" type="text" name ="id" >
+				<label id="loginName">Login Name</label> <input id="mobile" type="text" name ="id" ><br>
+	            <label>Internet Subscription ID</label> <input id="technicalId" type="text" name ="id" >
+	            <label id="tvsub">TV Subscription ID</label> <input id="customerName" type="text" name ="id" ><br>
+				<label>MAC Address</label> <input id="mac" type="text" name ="id" >
+	            <label id="voicesub">Voice Subscription ID</label> <input id="email" type="text" name ="id" ><br>
+				<label id="ip4">IPV4 Address</label> <input id="ipv4" type="text" name ="id" >
+	            <label id="date1">Date From</label> <input id="datefrom" type="date" name ="id" ><br>
+				<label id="ip6">IPV6 Address</label> <input id="ipv6" type="text" name ="id" >
+	            <label id="date2">Date To</label> <input id="dateto" type="date" name ="id" ><br>
+			    <label id="SS">Session Status</label> <select id="session"><option>Active-A </option><option>Suspend - S </option></select>
+			    <button type="button"  class="btn btn-info" style="border-radius:20px;">Search <i class="fa fa-search"></i>
+                </button>
+	            
+               </div>
+	          </div>
+	          <div id="tab2" class="tab">
+	            <p>Tab2 content goes here</p>
+	          </div>
+	       </div>
+	   </div>
+	   
+	   <div class="table-box panel panel-default">
+	      <table class="table table-bordered" >
+		    <thead>
+			  <tr>
+			    <th>Login Name</th>
+				<th>Subscription Status</th>
+				<th>AAA Status</th>
+			  </tr>
+            </thead>	
+            <tbody>
+             <tr>
+               <td><a href = "" >sazbo.gabirella</a></td>
+               <td>315781234</td>
+               <td>Active-A</td>
+            </tr>
+			<tr>
+               <td><a href = "" >sebastyan.gabor</a></td>
+               <td>315431234</td>
+               <td>Active-A</td>
+            </tr>
+			<tr>
+               <td><a href = "" >balogh.adam</a></td>
+               <td>319871234</td>
+               <td>Active-A</td>
+            </tr>
+            </tbody>			
+	       </table>
+	      
+		  <ul class="pagination justify-content-end">
+          <li class="page-item"><a class="page-link" href="javascript:void(0);">Previous</a></li>
+          <li class="page-item"><a class="page-link" href="javascript:void(0);">1</a></li>
+          <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+          <li class="page-item"><a class="page-link" href="javascript:void(0);">Next</a></li>
+          </ul>
+	   </div>
+	 </div>
+ </div>
+ 
+</body>

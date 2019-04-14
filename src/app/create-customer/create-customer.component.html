@@ -1,0 +1,268 @@
+
+
+<!-- <body>
+
+ <div class ="main">
+   <div class ="container">
+
+   <div class ="customerData required-field">
+	  <form name="form" #form="ngForm" novalidate>
+			<div>
+			<label id="cusId">Customer ID</label> <input id="customerId" type="text" name ="customerId" [class.is-invalid]="customerId.invalid && customerId.touched" #customerId="ngModel" [(ngModel)]="user.customerId" required/>
+			<label id = "dob">Internet Service Status</label> <select id="customerdob" name="iStatus" #iStatus="ngModel" [(ngModel)]="user.iStatus" required><option>Active-A </option><option *ngFor="let topic of topics">{{topic}}</option></select><br>	
+					<small class="text-danger" [class.d-none]="customerId.valid || customerId.untouched" style="padding-left:195px;">customerId is required</small>
+					<small class="text-danger" [class.d-none]="iStatus.valid || iStatus.untouched" style="padding-left:420px;">InternetServiceStatus is required</small>
+			</div>	
+			<div>
+			la<bel id="isId">Internet Subscription ID</label> <input id="technicalId" type="text" name ="techid"  #techid="ngModel" [(ngModel)] = "user.techid" required>
+			<label id = "place">TV Service Status</label> <select id="customerplace"name="sStatus" #sStatus="ngModel" [(ngModel)]="user.sStatus" required><option>Active-A</option><option *ngFor="let topic of topics">{{topic}}</option></select><br>
+			     <small class="text-danger" [class.d-none]="techid.valid || techid.untouched" style="padding-left:195px;">Internet Subscription Id is required</small>
+			     <small class="text-danger" [class.d-none]="sStatus.valid || sStatus.untouched" style="padding-left:420px;">TV ServiceStatus is required</small>
+		</div>
+      <div>
+			<label id="manSubsID">TV Subscription ID</label> <input id="customerName" type="text" name ="subid"  #subid="ngModel" [(ngModel)]="user.subid" required>
+			<label id ="mother">Voice Service Status</label> <select id="customerMother" name="vStatus" #vStatus="ngModel" [(ngModel)]="user.vStatus" required><option>Active-A </option><option *ngFor="let topic of topics">{{topic}}</option></select><br>
+			     <small class="text-danger" [class.d-none]="subid.valid || subid.untouched" style="padding-left:195px;">TV Subscription ID is required</small>
+			     <small class="text-danger" [class.d-none]="vStatus.valid || vStatus.untouched" style="padding-left:420px;">VoiceServiceStatus is required</small>	
+		</div>
+		<div>
+      <label id="voiceSubsId">Voice Subscription ID</label> <input id="email" type="text" name ="voiceid" #voiceid="ngModel" [(ngModel)] = "user.voiceid" required>
+			<label id="loginName">Login Name</label> <input id="mobile" type="text" name ="name" #name="ngModel" [(ngModel)] = "user.name" >
+			<small class="text-danger" [class.d-none]="voiceid.valid || voiceid.untouched" style="padding-left:195px;">voiceSubscriptionId is required</small>
+		</div>	
+	
+   <br> 
+ <br>   
+ 
+	
+		 <mat-tab-group [selectedIndex]="selectedIndex" animationDuration="0ms">
+			<mat-tab label="CustomerData">
+					<div class="tab-content">
+					<div id="tab1" class="tab active">
+							<label>Customer Name</label> <input id="cusName" type="text" name ="id" >
+					<label id="cus">Email</label> <input id="cusEmail" type="email" name ="id" ><br>
+					<label>Mobile Phone</label> <input id="cusMobile" type="number" name ="id">
+					<label id="cus">Subscriber Status</label> <input id="cusStatus" type="number" name ="id" ><br>
+				</div>
+				</div>
+				
+			</mat-tab>
+			<mat-tab label="User Preferences">
+					<div class="tab-content">
+							<div id="tab1" class="tab active">
+									<label>Customer Name</label> <input id="cusName" type="text" name ="id" >
+							<label id="cus">Email</label> <input id="cusEmail" type="email" name ="id" ><br>
+							<label>Mobile Phone</label> <input id="cusMobile" type="number" name ="id">
+							<label id="cus">Subscriber Status</label> <input id="cusStatus" type="number" name ="id" ><br>
+						</div>
+						</div>
+			</mat-tab>
+		</mat-tab-group>
+		
+
+   <br>
+   <div class = "buttons" >
+   <button id="cancel" type="button" class="btn btn-danger" (click)="reset(form)"> <i class="fa fa-trash-o" aria-hidden="true"></i>  Cancel</button>
+   <button id="save" type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal" (click)="submit(form)" [disabled]="form.invalid"><i class="fa fa-floppy-o" aria-hidden="true"></i>  Save</button>
+		</div>
+	</form>
+	 </div>
+	</div>
+ </div>
+
+</body>
+
+	 -->
+
+	 <div class="loadWrapper" *ngIf="showProgress">
+		<div class="loader"></div>  
+	</div>
+	 
+	 <body>
+		 <div class="main">
+			 <div class="container-fluid">
+				 <div class="customerData required-field">
+					 <form [formGroup]="cusForm">
+						<table cellspacing="0px"> 
+							<tr>
+								<td>
+						       <div class="form-group">
+							        <label id="cusId">Customer ID</label>
+									<input id="" formControlName="cusId" [class.is-invalid]="cusForm.get('cusId').touched && cusForm.get('cusId').invalid" class="form-control" type="text"/>
+									<div  *ngIf="cusForm.get('cusId').touched && cusForm.get('cusId').invalid" 
+									class="alert alert-danger">CustomerID is required</div>	
+								</div>
+									</td><td width="150px"></td>
+									<td>
+										<div class="form-group">
+											<label id="isStatus">Internet Service Status</label>
+											<select id="" class="form-control" formControlName="internetServiceStatus"  [class.is-invalid]="cusForm.get('internetServiceStatus').touched && cusForm.get('internetServiceStatus').invalid" >
+											  <option value=""></option>
+												<option *ngFor = "let topic of topics">{{topic}}</option>
+											</select>
+											<div  *ngIf="cusForm.get('internetServiceStatus').touched && cusForm.get('internetServiceStatus').invalid" 
+											class="alert alert-danger">Internet Service Status is required</div>	
+										</div>
+									</td><td width="150px"></td>
+									<td>
+										<div class="form-group">
+											<label id="voiceId">Voice Subscription ID</label>
+											<input id="" formControlName="voiceID" class="form-control"  [class.is-invalid]="cusForm.get('voiceID').touched && cusForm.get('voiceID').invalid" type="text"/>
+											<div  *ngIf="cusForm.get('voiceID').touched && cusForm.get('voiceID').invalid" 
+									           class="alert alert-danger">Voice Subscription ID is required</div>
+										</div>
+									</td>
+							</tr>
+							<tr>
+								<td>	
+           	                   <div class="form-group">
+							        <label id="isId">Internet Subscription ID</label>
+									<input id="" formControlName="internetId" class="form-control"  [class.is-invalid]="cusForm.get('internetId').touched && cusForm.get('internetId').invalid" type="text"/>
+									<div  *ngIf="cusForm.get('internetId').touched && cusForm.get('internetId').invalid" 
+									   class="alert alert-danger">Internet Subscription ID is required</div>
+										</div>
+								</td><td width="40px"></td>
+								<td>
+									<div class="form-group">
+										<label id="tvStatus">TV Service Status</label>
+										<select class="form-control" id="" formControlName="tvServiceStatus"  [class.is-invalid]="cusForm.get('tvServiceStatus').touched && cusForm.get('tvServiceStatus').invalid">
+											<option>Active-A</option>
+											<option>Suspend-A</option>
+										</select>
+										<div  *ngIf="cusForm.get('tvServiceStatus').touched && cusForm.get('tvServiceStatus').invalid" 
+									     class="alert alert-danger">TV Service Status is required</div>
+									</div>
+								</td><td width="40px"></td>
+								<td>
+									<div class="form-group">
+										<label>Login Name</label>
+										<input type="text" class="form-control" id="" formControlName="name"/>
+									</div>
+								</td>
+							</tr>
+							<tr>	
+								<td>
+									<div class="form-group">
+										<label id="tvId">TV Subscription ID</label>
+										<input id="" formControlName="tvId" class="form-control"  [class.is-invalid]="cusForm.get('tvId').touched && cusForm.get('tvId').invalid" type="text"/>
+										<div  *ngIf="cusForm.get('tvId').touched && cusForm.get('tvId').invalid" 
+								        	class="alert alert-danger">TV Subscription ID is required</div>
+									</div>
+								</td><td width="40px"></td>
+								<td>
+									<div class="form-group">
+										<label id="voiceStatus">Voice Service Status</label>
+										<select id="" class="form-control" formControlName="voiceServiceStatus"  [class.is-invalid]="cusForm.get('voiceServiceStatus').touched && cusForm.get('voiceServiceStatus').invalid">
+											<option>Active-A</option>
+											<option>Suspend-A</option>
+										</select>
+										<div  *ngIf="cusForm.get('voiceServiceStatus').touched && cusForm.get('voiceServiceStatus').invalid" 
+									     class="alert alert-danger">Voice Service Status is required</div>
+									</div>
+								</td>		
+						 </tr>
+						</table>
+						
+						<br>
+
+						<div class="row">
+								<div class="tabs">
+									<ul class="tab-links nav nav-pills">
+					
+										<li [class.active]="viewMode == 'Customer'">
+											<a  (click)="viewMode='Customer'">CustomerData </a>
+										</li>
+										<li [class.active]="viewMode == 'Preferences'">
+											<a  class="active"  (click)="viewMode='Preferences'">User Preferences</a>
+										</li>
+									</ul>
+					
+					
+								</div>
+							</div>
+              <br>
+							<div [ngSwitch]="viewMode">
+								<div *ngSwitchCase="'Customer'">
+
+										<div class="tab-content">
+												<div id="tab1" class="tab active">
+												<table height="5px">	
+													<tr>
+														<td>
+													<div class="form-group">
+													 <label>Customer Name</label>
+													 <input type="text" class="form-control" />
+													 </div>
+													 </td><td width="150px"></td>
+													 <td>
+														 <div class="form-group">
+													      <label >Email</label>
+													      <input  type="email" class="form-control" />
+													    </div>
+													  </td>
+													 </tr>
+													 <tr>
+														 <td>
+															 <div class="form-group">
+																<label>Mobile Phone</label> 
+																<input  type="number" class="form-control" />
+																</div>
+															</td><td width="150px"></td>
+															<td>
+																<div class="form-group">
+																		<label >Subscriber Status</label> 
+																		<input type="number" class="form-control" />
+																</div>
+															</td>
+															</tr>
+													 </table>
+												</div>
+											</div>
+
+								</div>
+
+								<div *ngSwitchCase="'Preferences'">
+
+										<div class="tab-content">
+												<div id="tab1" class="tab active">
+													<table>
+														<tr>
+															<td>
+																<div class="form-group">
+																		<label>Customer Name</label> 
+																		<input class="form-control" type="text" name ="id"/>
+																</div>
+
+															</td><td width="150px"></td>
+															<td>
+                                                                    <div class="form-group">
+																	   <label>Email</label> 
+																	   <input class="form-control" type="email" name ="id" />
+																	</div>
+															</td>
+														</tr>
+													</table>
+													 
+													
+													 <!-- <label>Mobile Phone</label> <input id="cusMobile" type="number" name ="id">
+													 <label id="cus">Subscriber Status</label> <input id="cusStatus" type="number" name ="id" ><br> -->
+												</div>
+											</div>
+
+								</div>
+
+							</div>
+							<br>
+							
+							<div class = "buttons" >
+									<button id="cancel" type="button" class="btn btn-danger" (click)="reset(form)"> <i class="fa fa-trash-o" aria-hidden="true"></i>  Cancel</button>
+									<button id="save" type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal" (click)="submit(form)" [disabled]="cusForm.invalid"><i class="fa fa-floppy-o" aria-hidden="true"></i>  Save</button>
+							</div>
+
+					 </form>
+
+				 </div>
+			 </div>
+		 </div>
+	 </body>
+	 

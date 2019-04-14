@@ -1,0 +1,72 @@
+body {
+    width:100%;
+    height:100vh;
+    margin:0 auto;
+    padding:0;
+    background:white;
+    font-family:sans-serif; 
+}
+
+.Login-form{
+    padding-top:5px;
+    padding-bottom: 25px;
+    margin-left:45px;
+    width:80%;
+    height:100%;
+    background:white;
+    border-top-left-radius:40px;
+    border-bottom-right-radius:40px;
+    margin-top:35px;
+    box-shadow: 1px 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+.top-nav{
+    height:7%;
+    width:100%;
+    position:fixed;
+    background-color:#E60000;
+    overflow-x:hidden;
+    padding-top:20px;
+    font-family:sans-serif;
+    
+   }
+   #Lang{
+   font:sans-serif;
+   font-size:15px;
+   color :#fff;
+   background-color:transparent;
+   padding-left:1050px;
+   }
+   #faq{
+   font:sans-serif;
+   font-size:15px;
+   color :#fff;
+   background-color:transparent;
+   padding-left:70px;
+   }
+
+   .form-control ng-touched ng-dirty ng-invalid{
+    font:sans-serif;
+    font-size:10px;
+    color: #E60000;
+   }
+
+   .Login:hover {
+    background-color:#f23030;
+    color: white;
+   }
+  .Login{
+    width:41%;
+    height:45px;
+    background-color:#E60000;
+    padding:0px 25px;
+    margin:8px 0;
+    border:1px;
+    border-radius:4px;
+    cursor:pointer;
+    border-top-left-radius:10px;
+    border-bottom-right-radius:10px;
+    font-size:19px;
+    color:white;
+  }
+

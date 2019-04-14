@@ -1,0 +1,27 @@
+
+<!-- <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+
+
+<body>
+<div class ="side-nav">
+  <img src="assets/img/download1.png" style="width:110px;height:100px;margin-left:55px;margin-bottom:30px;">
+  <a [routerLink]="'/create/customer'" ><i class="fa fa-plus-square" aria-hidden="true"></i>  Create Customer</a>
+  <a [routerLink]="'/create/search'"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Search & Edit Customer</a>
+  <a [routerLink]="'/create/search/List'"><i class="fa fa-search" aria-hidden="true"></i>  Search & List</a>
+  <a [routerLink]="'/create/passwordmngt'"><i class="fa fa-lock" aria-hidden="true"></i> Password Management</a>
+  <a href="" class="logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+  
+ </div>
+ 
+ <div style="margin-left:230px;padding-left:50px;background-color:#CCD1D1D1;font-size:22px;font-family:sans-serif;height:27%;width:100%;padding-top:20px;padding-bottom:20px;">
+  {{title}}
+  </div> 
+  <br>
+  
+
+</body>
+<router-outlet></router-outlet>

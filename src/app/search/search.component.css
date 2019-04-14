@@ -1,0 +1,191 @@
+body{
+    background-color:#FFFFFF;
+    
+    }
+    
+    .main{
+    margin-left:230px;
+    padding : 0px 10px;
+    }
+    .customerData {
+    margin-left:30px;
+    font-size:15px;
+    font-family:sans-serif;
+    }
+    
+    .extButton{
+        margin-left: 79%;
+        
+    }
+    .userPreferences h5{
+    background-color:#EBF5FB;
+    }
+    .activationStatus h5{
+    background-color:#EBF5FB;
+    }
+    #customerId{
+      margin-left : 102px;
+      width: 190px!important;
+    
+      }
+    #conStatus{
+        margin-left: 100px;
+        width: 190px!important;
+    }
+    #technicalId{
+     margin-left : 36px;
+     width: 190px!important;
+    }
+    #customerplace{
+     margin-left : 94px;
+     width: 190px!important;
+     }
+    #customerName{
+      margin-left : 67px; 
+      width: 190px!important;
+     }
+    #customerMother {
+      margin-left : 76px;
+      width: 190px!important;
+    }
+    #email{
+    margin-left : 49px;
+    width: 190px!important;
+    }
+    #mobile{
+    margin-left : 133px;
+    width: 190px!important;
+    }
+    
+    #dob{
+      margin-left : 110px;
+    }
+    #loginName{
+      margin-left:110px;
+    }
+    #place{
+      margin-left : 110px;
+    }
+    #mother{
+      margin-left : 110px;
+    }
+    #AAA{
+     margin-left : 260px;
+    }
+    .buttons{
+    margin-top : 40px;
+    }
+      #loginN{
+        margin-left:113px;
+        width: 190px!important;
+      }
+      #cusEmail{
+        margin-left: 189px;
+        width: 190px!important;
+      }
+      #cus{
+        margin-left:107px;
+      }
+      #save{
+        margin-left:785px;
+      }
+      #cancel{
+      margin-left:40px;
+      }
+      #customerdob{
+      margin-left : 98px;
+      width: 190px!important;
+    }
+    .tabs{
+        width:100%;
+        display:inline-block;
+      }
+      .tab-links:after{
+          display:block;
+          clear:both;
+          content:'';
+      }
+      .tab-links li {
+      margin : 0px 5px;
+      float : left;
+      list-style:none;
+      }
+      .tab-links a {
+       padding : 9px 15px;
+       display : inline-block;
+       border-radius : 3px 3px 10px 0px;
+       background:#CCD1D1D1;
+       color :#000000;
+       transistion : all linear 0.15s;
+      }
+      .tab-links a:hover{
+      background:#a7cce5;
+      }
+      li.active a,li.active a:hover{
+          background:#E30713;
+          color : #FFFFFF;
+        }
+      .tab-content{
+      width: 92%;
+      padding:15px;
+      border-radius:3px;
+      box-shadow: 2px 2px 3px 3px rgba(0,0,0,0.15);
+      margin-left:20px;
+      font-size:15px;
+    font-family:sans-serif;
+      }
+      .tab{
+        display:none;
+      }
+      .tab.active{
+      display:block;
+      }
+      #action{
+      margin-right: 50px;
+        margin-left: 5px;
+      }
+     
+      #cusIdduplicate{
+          margin-left: 50px;
+      }
+      #cusName{
+      margin-left: 300px;
+      }
+      #labelBg{
+        background-color: #E5E7E9;
+        padding-top: 9px;
+        padding-left: 12px;
+        font-weight: bold;
+      }
+      #rowBg{
+        padding-top: 20px;
+        padding-left: 23px;
+        }
+        #rowBg1{
+        padding-left: 23px;
+         padding-top: 5px;
+      
+        }
+    .edit{
+      margin-right: 50px;
+    }
+    #cusNameLabel{
+     margin-right: 50px;
+        margin-left: 72px;
+    }
+    #cusIDLabel{
+        margin-left: 268px;
+    
+    }
+    .search{
+    font-size: 13px;
+        margin-left: 30px;
+    }
+    .required-field #custId::after{
+       content:"*";
+       color:red;
+    }
+    .required-field #custName::after{
+       content:"*";
+       color:red;
+    }

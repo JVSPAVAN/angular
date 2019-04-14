@@ -1,0 +1,128 @@
+body{
+    background-color:#FFFFFF;
+    font-size:15px;
+    font-family:sans-serif;
+    }
+    
+    .main{
+    margin-left:230px;
+    padding : 0px 10px;
+    }
+    
+    
+    .tabs{
+        width:100%;
+        display:inline-block;
+        margin-top:20px;
+      }
+      .tab-links:after{
+          display:block;
+          clear:both;
+          content:'';
+      }
+      .tab-links li {
+      margin : 0px 5px;
+      float : left;
+      list-style:none;
+      }
+      .tab-links a {
+       padding : 9px 15px;
+       display : inline-block;
+       border-radius : 3px 3px 10px 0px;
+       background:#CCD1D1D1;
+       color :#000000;
+       transistion : all linear 0.15s;
+      }
+      .tab-links a:hover{
+      background:#a7cce5;
+      }
+      li.active a,li.active a:hover{
+          background:#E30713;
+          color : #FFFFFF;
+        }
+      .tab-content{
+      padding:15px;
+      border-radius:2px;
+      box-shadow: -1px 1px 1px 1px rgba(0,0,0,0.15);
+      margin-left:20px;
+      }
+      .tab{
+        display:none;
+      }
+      .tab.active{
+      display:block;
+      }
+      
+      #customerId{
+      margin-left : 110px;
+      width: 190px!important;
+      }
+      #loginName{
+      margin-left:107px;
+    }
+    #mobile{
+    margin-left : 105px;
+    width: 190px!important;
+    }
+    #technicalId{
+     margin-left : 37px;
+     width: 190px!important;
+    }
+    #customerName{
+      margin-left : 62px;
+      width: 190px!important;  
+     }
+     #email{
+    margin-left : 45px;
+    width: 190px!important;
+    }
+    #mac{
+    margin-left:101px;
+    width: 190px!important;
+    }
+    #ipv4{
+    margin-left:102px;
+    width: 190px!important;
+    }
+    #datefrom{
+    margin-left:116px;
+    width: 190px!important;
+    }
+    #ipv6{
+    margin-left:102px;
+    width: 190px!important;
+    }
+    #dateto{
+    margin-left:135px;
+    width: 190px!important;
+    }
+    #session{
+    margin-left:94px;
+    padding-left:60px;
+    width: 190px!important;
+    }
+    #tvsub{
+    margin-left:107px;
+    }
+    #voicesub{
+    margin-left:107px;
+    }
+    #date1{
+    margin-left:107px;
+    }
+    #date2{
+    margin-left:107px;
+    }
+    .table-box{
+    margin-top:30px;
+    padding:15px;
+    }
+    button{
+    margin-left:500px;
+    }
+    
+    
+    .search{
+    font-size: 13px;
+        margin-left: 30px;
+    }

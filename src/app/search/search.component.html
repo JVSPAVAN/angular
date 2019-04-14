@@ -1,0 +1,251 @@
+
+
+<!-- <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+ -->
+<!-- <body>
+
+ <div class ="main">
+   <div class ="container">
+  <form name="form" #f="ngForm" novalidate>
+   <div class ="customerData required-field">
+    
+    <div>
+	  <label id="cusId">Customer ID</label> <input id="customerId" type="text" name ="cusID" #cusID="ngModel" [(ngModel)]="cusIDs" required >
+    <label id="dob">Customer Name</label> <input id="customerdob" type="text" name ="cusName" #cusName="ngModel" [(ngModel)]="cusNames" required><br>
+          <small class="text-danger" [class.d-none]="cusID.valid || cusID.untouched" style="padding-left:195px;">CustomerId is required</small>
+         <small class="text-danger" [class.d-none]="cusName.valid || cusName.untouched" style="padding-left:420px;">Customer Name is required</small>   
+  </div>
+	  <label>Internal Subscription ID</label> <input id="technicalId" type="text" name ="internalId" [(ngModel)]="internalIds" >
+	  <label id = "place">TV Service Status</label> <select id="customerplace" name="tStatus" #tStatus="ngModel" [(ngModel)]="tsatuss"><option>Active-A</option><option *ngFor="let topic of topics">{{topic}}</option></select><br>
+	  <label>TV Subscription ID</label> <input id="customerName" type="text" name ="subId" [(ngModel)]="subId" >
+	  <label id ="mother">Voice Service Status</label> <select id="customerMother" name="vStatus" #vStatus="ngModel" [(ngModel)]="vstatuss"><option>Active-A </option><option *ngFor="let topic of topics">{{topic}}</option></select><br>
+	  <label>Voice Subscription ID</label> <input id="email" type="text" name ="voiceId" [(ngModel)]="voiceId" >
+	  <label id="loginName">Login Name</label> <input id="mobile" type="text" name ="name" [(ngModel)]="name" >
+   </div>
+   <br> 
+   <div class="extButton">
+   <button type="button" class="button btn btn-info" style="border-radius:20px;" >Search <i class="fa fa-search"></i> </button>   <br>	
+   </div>
+   </form>
+   <br>	
+   <div class="tab-content">
+ <div id="labelBg">
+ <label id="action" >Action</label> <label id="cusIdduplicate">Customer Name</label><label id="cusName">Customer ID</label>
+ </div>
+ <div id="rowBg">
+ <a [routerLink]="'/create/customer'" class="edit">Edit</a> 
+ <label id="cusNameLabel">David Thomas</label>
+ <label id="cusIDLabel">C1128906</label>
+ </div>
+
+
+</div>
+   <div class = "buttons" >
+   <button id="cancel" type="button" class="btn btn-danger"> <i class="fa fa-trash-o" aria-hidden="true"></i>  Cancel</button>
+   <button id="save" type="button" class="btn btn-success"><i class="fa fa-floppy-o" aria-hidden="true"></i>  Save</button>
+   </div>
+   </div>
+ </div>
+</body> -->
+
+<body>
+  <div class="main">
+    <div class="container-fluid">
+      <div class="customerDate required-field">
+        <form [formGroup]="searchForm">
+          <table>
+              <tr>
+                  <td>
+                     <div class="form-group">
+                        <label id="custId">Customer ID</label>
+                        <input id="" formControlName="cusId"  [class.is-invalid]="searchForm.get('cusId').touched && searchForm.get('cusId').invalid" class="form-control" type="text"/>
+                        <div  *ngIf="searchForm.get('cusId').touched && searchForm.get('cusId').invalid" 
+                         class="alert alert-danger">CustomerID is required</div>
+                      </div>
+                    </td><td width="150px"></td>
+                    <td>
+                      <div class="form-group">
+                        <label id="custName">Customer Name</label>
+                        <input id="" class="form-control" [class.is-invalid]="searchForm.get('cusName').touched && searchForm.get('cusName').invalid" formControlName="cusName" type="text"/>
+                        <div  *ngIf="searchForm.get('cusName').touched && searchForm.get('cusName').invalid" 
+                         class="alert alert-danger">CustomerName is required</div>
+                      </div>
+                    </td><td width="150px"></td>
+                    <td>
+                      <div class="form-group">
+                        <label>Voice Subscription ID</label>
+                        <input id="" formControlName="voiceId" class="form-control" type="text"/>
+                      </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>	
+                         <div class="form-group">
+                          <label>Internal Subscription ID</label>
+                          <input id="" formControName="internalId" class="form-control" type="text"/>
+                        </div>
+                    </td><td width="40px"></td>
+                    <td>
+                      <div class="form-group">
+                        <label>TV Service Status</label>
+                        <select class="form-control" id="" formControlName="tvServiceStatus">
+                          <option>Active-A</option>
+                          <option>Suspend-A</option>
+                        </select>
+                      </div>
+                    </td><td width="40px"></td>
+                    <td>
+                      <div class="form-group">
+                        <label>Login Name</label>
+                        <input type="text" class="form-control" id="" formControlName="name"/>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                      <td>	
+                           <div class="form-group">
+                            <label>Tv Subscription ID</label>
+                            <input id="" formControName="tvId" class="form-control" type="text"/>
+                          </div>
+                      </td><td width="40px"></td>
+                      <td>
+                        <div class="form-group">
+                          <label>Voice Service Status</label>
+                          <select class="form-control" id="" formControlName="voiceServiceStatus">
+                            <option>Active-A</option>
+                            <option>Suspend-A</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                                   
+          </table>
+          <div class="extButton">
+              <button type="button" class="button btn btn-info" style="border-radius:20px;" >Search <i class="fa fa-search"></i> </button>   <br>	
+          </div>
+          <br>
+          
+          <div class="tab-content">
+              <div id="labelBg">
+              <label id="action" >Action</label> <label id="cusIdduplicate">Customer Name</label><label id="cusName">Customer ID</label>
+              </div>
+              <div id="rowBg">
+              <button data-toggle="modal" data-target="#myModal" class="edit">Edit </button>
+              <label id="cusNameLabel">David Thomas</label>
+              <label id="cusIDLabel">C1128906</label>
+              </div>
+              </div>
+
+              <div class = "buttons" >
+                  <button id="cancel" type="button" class="btn btn-danger"> <i class="fa fa-trash-o" aria-hidden="true"></i>  Cancel</button>
+                  <button id="save" type="button" class="btn btn-success" [disabled]="searchForm.invalid"><i class="fa fa-floppy-o" aria-hidden="true"></i>  Save</button>
+              </div>
+
+              <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                  <div class="modal-content" style="width:900px;margin-left:-150px;">
+              
+                    <!-- Modal Header -->
+                    <div class="modal-header" style="background-image: linear-gradient(to right, white,red);">
+                      <h4 class="modal-title">Edit Customer</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+              
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                      
+                      <form [formGroup] = "editForm">
+                      <table cellspacing="0px"> 
+                        <tr>
+                          <td>
+                             <div class="form-group">
+                                <label id="cusId">Customer ID</label>
+                            <input id="" formControlName="cusEditId"  class="form-control" type="text"/>
+                          </div>
+                            </td><td width="150px"></td>
+                            <td>
+                              <div class="form-group">
+                                <label id="isStatus">Internet Service Status</label>
+                                <select id="" class="form-control" formControlName="internetServiceEditStatus" >
+                                  <option value=""></option>
+                                  <option *ngFor = "let topic of topics">{{topic}}</option>
+                                </select>	
+                              </div>
+                            </td><td width="150px"></td>
+                            <td>
+                              <div class="form-group">
+                                <label id="voiceId">Voice Subscription ID</label>
+                                <input id="" formControlName="voiceEditID" class="form-control"   type="text"/>
+                              </div>
+                            </td>
+                        </tr>
+                        <tr>
+                          <td>	
+                             <div class="form-group">
+                                <label id="isId">Internet Subscription ID</label>
+                            <input id="" formControlName="internetEditId" class="form-control"  type="text"/>
+                              </div>
+                          </td><td width="40px"></td>
+                          <td>
+                            <div class="form-group">
+                              <label id="tvStatus">TV Service Status</label>
+                              <select class="form-control" id="" formControlName="tvServiceEditStatus"  >
+                                <option>Active-A</option>
+                                <option>Suspend-A</option>
+                              </select>
+                            </div>
+                          </td><td width="40px"></td>
+                          <td>
+                            <div class="form-group">
+                              <label>Login Name</label>
+                              <input type="text" class="form-control" id="" formControlName="nameEdit"/>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>	
+                          <td>
+                            <div class="form-group">
+                              <label id="tvId">TV Subscription ID</label>
+                              <input id="" formControlName="tvEditId" class="form-control" type="text"/>
+                            </div>
+                          </td><td width="40px"></td>
+                          <td>
+                            <div class="form-group">
+                              <label id="voiceStatus">Voice Service Status</label>
+                              <select id="" class="form-control" formControlName="voiceServiceEditStatus"  >
+                                <option>Active-A</option>
+                                <option>Suspend-A</option>
+                              </select>
+                            </div>
+                          </td>		
+                       </tr>
+                      </table>
+                     </form>
+
+
+
+
+                    </div>
+              
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+              
+                  </div>
+                </div>
+              </div>
+
+        </form>
+
+       
+
+      </div>
+    </div>
+  </div>
+</body>
+
+  

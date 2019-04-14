@@ -1,0 +1,81 @@
+<!-- <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+
+
+<body>
+    <div class="top-nav">
+      <a id="Lang" href="">Language</a>
+      <a id="faq" href="">FAQ</a>
+    </div>
+    <div>
+      <div style="width:46%;height:100vh;float:left;text-align:center;padding-top:14%;">
+        <div class="head" style="width:250px;height:110px;margin:0 auto;margin-top:60px;padding-left:25px;">
+          <img src="/assets/img/super.png" style="width:230px;height:150px;top:-25%;left: 35%;">
+        </div>
+        <div style="padding-left:30px;text-align:center;font-size:32px;color:#161616;padding-top: 40px;">
+          Super Human
+        </div>
+      </div>
+      <div style="width:52%;height:100vh;float:left;padding:55px;">
+        <form [formGroup]="Loginform">
+          <div class="Login-form">
+            <div style="padding-top:20px;text-align:center;">
+              <img src="/assets/img/user1.png" style="width:75px;height:75px">
+            </div>
+            <div style="text-align:center;font-size:28px;margin-top:15px;">
+              Welcome !
+            </div>
+            <div>
+              <div style="padding-left:70px;padding-right:50px;padding-top:10px;text-align:left;">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>User Name:</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="fa fa-user"></i>
+                        </span>
+                      </div>
+                      <input formControlName="username" id="name" type="text" class="form-control">
+                      </div>
+                      <div  *ngIf="Loginform.get('username').touched && Loginform.get('username').invalid" 
+                      class="alert alert-danger">username is required</div>
+                  </div>
+                </div>
+              </div>
+              <div style="padding-left:70px;padding-right:50px;padding-top:10px;text-align:left;">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Password:</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="fa fa-lock"></i>
+                        </span>
+                      </div>
+                      <input formControlName="password" id="name" type="password" class="form-control">
+                    </div>
+                    <div  *ngIf="Loginform.get('password').touched && Loginform.get('password').invalid" class="alert alert-danger">password is required</div>
+                  </div>
+                </div>
+              </div>
+              <div style="padding-left:87px;padding-top:10px;text-align:left;">
+                <input style="font-size:15px;" type="checkbox" name="remember" value="Remember me"> Remember me
+                <br>
+              </div>
+            </div>
+            <div style="width:100%;text-align:center;padding-top:10px;margin-top:10px;">
+              <input class="Login" type="submit" value="Login" (click)=AuthLogin() [disabled]="Loginform.invalid">
+            </div>
+          </div>
+        </form>
+      </div>
+   
+    </div>
+  
+  </body>
+  
+  

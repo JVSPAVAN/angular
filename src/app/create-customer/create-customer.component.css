@@ -1,0 +1,209 @@
+
+body{
+    background-color:#FFFFFF;
+    }
+    
+    .main{
+    margin-left:230px;
+    padding : 0px 10px;
+    }
+    .customerData {
+    margin-left:30px;
+    }
+    
+    .userPreferences h5{
+    background-color:#EBF5FB;
+    }
+    .activationStatus h5{
+    background-color:#EBF5FB;
+    }
+    #customerId{
+      margin-left : 102px;
+      width: 190px!important;
+    
+      }
+    #customerdob{
+      margin-left : 55px;
+      width: 190px!important;
+    }
+    #technicalId{
+     margin-left : 22px;
+     width: 190px!important;
+    }
+    #customerplace{
+     margin-left : 93px;
+     width: 190px!important;
+     }
+    #customerName{
+      margin-left : 60px; 
+      width: 190px!important;
+     }
+    #customerMother {
+      margin-left : 71px;
+      width: 190px!important;
+    }
+    #email{
+    margin-left : 39px;
+    width: 190px!important;
+    }
+    #mobile{
+    margin-left : 133px;
+    width: 190px!important;
+    }
+    
+    #dob{
+      margin-left : 110px;
+    }
+    #loginName{
+      margin-left:110px;
+    }
+    #place{
+      margin-left : 110px;
+    }
+    #mother{
+      margin-left : 110px;
+    }
+    #AAA{
+     margin-left : 260px;
+    }
+    .buttons{
+    margin-top : 40px;
+    }
+    
+    
+    .tabs{
+        width:100%;
+        display:inline-block;
+      }
+      .tab-links:after{
+          display:block;
+          clear:both;
+          content:'';
+      }
+      .tab-links li {
+      margin : 0px 5px;
+      float : left;
+      list-style:none;
+      }
+      .tab-links a {
+       padding : 9px 15px;
+       display : inline-block;
+       border-radius : 3px 3px 10px 0px;
+       background:#CCD1D1D1;
+       color :#000000;
+      }
+      .tab-links a:hover{
+      background:#a7cce5;
+      }
+      li.active a,li.active a:hover{
+          background:#E30713;
+          color : #FFFFFF;
+        }
+      .tab-content{
+      padding:15px;
+      border-radius:3px;
+      box-shadow: 2px 2px 3px 3px rgba(0,0,0,0.15);
+      margin-left:20px;
+       width:92%;
+      }
+      .tab{
+        display:none;
+      }
+      .tab.active{
+      display:block;
+      }
+      #cusName{
+        margin-left: 84px;
+        width: 190px!important;
+      }
+      #cusEmail{
+        margin-left: 190px;
+        width: 190px!important;
+      }
+      #cusMobile{
+        margin-left: 101px;
+        width: 190px!important;
+      }
+      #cusStatus{
+      margin-left:106px;
+      width: 190px!important;
+      }
+      #cusPlace{
+      margin-left:107px;
+      width: 190px!important;
+      }
+      #cusBirth{
+        margin-left: 138px;
+        width: 190px!important;
+      }
+      #cus{
+        margin-left:107px;
+      }
+      #save{
+        margin-left:790px;
+      }
+      #cancel{
+      margin-left:40px;
+      }
+     
+    .search{
+    font-size: 13px;
+        margin-left: 30px;
+    }
+    .required-field #isStatus::after{
+       content:"*";
+       color:red;
+    }
+    .required-field #cusId::after{
+       content:"*";
+       color:red;
+    }
+    .required-field #voiceId::after{
+       content:"*";
+       color:red;
+    }
+    .required-field #isId::after{
+       content:"*";
+       color:red;
+    }
+    .required-field #tvStatus::after{
+       content:"*";
+       color:red;
+    }
+    .required-field #tvId::after{
+       content:"*";
+       color:red;
+    }
+    .required-field #voiceStatus::after{
+       content:"*";
+       color:red;
+    }
+    .mat-tab-label :focus{
+      background-color: #E30713 !important;
+    }
+
+    .loadWrapper {  
+      background: rgba(0,0,0,0.3);  
+      width: 100%;  
+      height: 100%;  
+      position: fixed;  
+      top:0px;  
+      left:0px;  
+      z-index: 99999;  
+  }  
+  .loader {
+      border: 5px solid red; /* Light grey */
+      border-top: 5px solid white; /* gray */
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+  }

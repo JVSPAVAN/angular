@@ -1,0 +1,30 @@
+body{
+    background-color:#FFFFFF;
+    }
+    .side-nav{
+      height:100%;
+      width:230px;
+      position:fixed;
+      z-index:1;
+      top:0;
+      left:0;
+      background-color:#E30713;
+      overflow-x:hidden;
+      padding-top:20px;
+    }
+    .logout{
+        margin-top: 240px;
+          font-weight: bold;
+          margin-left: 10px;
+      }
+    
+    .side-nav a {
+       padding : 6px 10px 6px 16px;
+       color:#FFFFFF;
+       display:block;
+    }
+    .side-nav a:focus{
+      background-color:#922B21;
+      
+    }
+   

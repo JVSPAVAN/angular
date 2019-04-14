@@ -1,0 +1,201 @@
+body{
+    background-color:#FFFFFF;
+    font-size:15px;
+    font-family:sans-serif;
+    font-weight: bold;
+    }
+    .side-nav{
+      height:100%;
+      width:230px;
+      position:fixed;
+      z-index:1;
+      top:0;
+      left:0;
+      background-color:#E30713;
+      overflow-x:hidden;
+      padding-top:20px;
+    }
+    label{
+text-align: start;
+font-family: sans-serif;
+
+    }
+    
+    .side-nav a {
+       padding : 6px 10px 6px 16px;
+       color:#FFFFFF;
+       display:block;
+    }
+    .side-nav a.active{
+      background-color:#922B21;
+      
+    }
+    .main{
+    margin-left:230px;
+    padding : 0px 10px;
+    }
+    
+    
+    .tabs{
+        width:100%;
+    display:inline-block;
+    margin-top:20px;
+      }
+      .tab-links:after{
+          display:block;
+      clear:both;
+      content:'';
+      }
+      .tab-links li {
+      margin : 0px 5px;
+      float : left;
+      list-style:none;
+      }
+      .tab-links a {
+       padding : 9px 15px;
+       display : inline-block;
+       border-radius : 3px 3px 10px 0px;
+       background:#CCD1D1D1;
+       color :#000000;
+       transistion : all linear 0.15s;
+      }
+      .tab-links a:hover{
+      background:#a7cce5;
+      }
+      li.active a,li.active a:hover{
+          background:#E30713;
+      color : #FFFFFF;
+        }
+      .tab-content{
+      padding-top:20px;
+      border-radius:2px;
+      padding-left: 1px;
+      border-color: #ff6666;     
+      margin-left:20px;
+      }
+      .tab{
+        display:none;
+      }
+      .tab.active{
+      display:block;
+      }
+      
+      table.mat-elevation-z8 mat-table{
+    margin-top:30px;
+    
+    padding-top:20px;
+    }
+    button{
+    margin-left:750px;
+    }
+    
+    .logout{
+      margin-top: 240px;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+    .search{
+    font-size: 13px;
+        margin-left: 30px;
+    }
+    
+
+table {
+    width: 100%;
+  }
+  
+  th.mat-sort-header-sorted {
+    color: black;
+  }
+  .mat-header-cell ng-tns-c3-1 cdk-column-name mat-column-name ng-star-inserted{
+
+font-family: sans-serif;
+font-size: 10px
+
+
+  }
+
+  .element-row:not(.expanded):hover {
+    background: rgb(235, 229, 229);
+  }
+  .mat-row detail-row{
+   
+        border: 1px solid black;
+        padding: 25px 50px 75px;
+        background-color: rgb(206, 224, 224);
+ }
+ .expand-content {
+    background: #f0eded;
+  padding: 5px;
+  font-family: sans-serif;
+  font-stretch: condensed;
+  font-weight: 200;
+  }
+
+  th{
+background-color: #ff6666;
+    color:white;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: sans-serif;
+      }
+      tr{
+          font-family: sans-serif;
+        font-size: 15px;
+       
+}
+.mat-paginator-page-size-label{
+    font-family: sans-serif;
+    font-size: 15px;
+    font-stretch: condensed;
+    
+
+}
+#select option{
+background: lightcoral;
+
+}
+
+
+.example-container mat-elevation-z8{
+align-content: center;
+
+}
+
+.Search-button{
+  padding-left:300px;
+  
+}
+.btn-danger{
+  font-weight: bold;
+  
+}
+
+.btn-danger:hover{
+background-color: white;
+color:red;
+border-color: red;
+border-width: 2px;
+font-weight: bold;
+}
+
+table.Analyticsform{
+
+align-content: center;
+
+}
+
+#AnalyticsSearch{
+
+  margin-left: 700px;
+}
+
+#Customersearch{
+  margin-left: 700px;
+}
+
+
+
+
+
+
