@@ -1,28 +1,26 @@
+
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppRoutingModule } from '../app-routing.module';
+import { AppComponent } from '../app.component';
+import { UserRegistrationComponent } from '../user-registration/user-registration.component';
+import { RouterModule, Routes } from '@angular/router';
+import { AgentRegistrationComponent } from '../agent-registration/agent-registration.component';
+import { ManagerRegistrationComponent } from '../manager-registration/manager-registration.component';
+
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent  {
+export class HomeComponent implements OnInit {
 
-  constructor(private router:Router){}
-  Username:string;
-  Password:string;
+  constructor() { }
 
-  title = 'Super Human Front End';
-  greeting = 'Welcome !';
-
-  
- login():void{
-   if(this.Username == 'testuser' && this.Password == 'testuser'){
-     alert("user logged in");
-     this.router.navigate(["create"]);
-   }else{
-     alert("invalid credentials");
-   }
- }
+  ngOnInit() {
+  }
 
 }
